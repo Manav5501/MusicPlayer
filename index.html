@@ -11,14 +11,28 @@
 </head>
 <body>
      <div class="main_div">
+         <!-- Music Container Starts Here  -->
          <div class="music_container">
+             <!-- Tittle of music  -->
              <h2 id="title">SCAM</h2>
+             <!-- Music artist name  -->
              <h3 id="artist">Achint</h3>
+             <!-- Image of music  -->
              <div class="img_container">
                  <img src="images/scam-1.jpg" alt="">
              </div>
-             <!-- For adding music we have to use audio tag with controls attribute -->
+             <!-- For adding music we have to use audio tag with optional controls attribute -->
              <audio src="music/scam-1.mp3"></audio>
+             <!-- Progress Bar  -->
+             <div class="progressbar_container" id="progress_container">
+                 <div class="progress_duration_meter">
+                     <div id="current_time">0:00</div>
+                     <div id="duration_time">2:11</div>
+                 </div>
+                 <div class="progress_div" id="progress_div">
+                    <div class="progress" id="progress"></div>
+                </div>
+             </div>
              <!-- Controls  -->
              <div class="music_controls">
                 <i class="fa-solid fa-backward icons " title="Previous" id="prev"></i>
@@ -27,7 +41,6 @@
              </div>
          </div>
      </div> 
-     <script src="js/main.js">
-     </script>
+     <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+/* 
+Importing the jost font..... 
+Basic styling........
+*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Jost&family=Poppins&family=Roboto&family=Ubuntu&display=swap');
 * {
     margin: 0;
@@ -8,21 +12,25 @@
 html{
     font-size: 62.5%; /*Equivalent to 10px (By default:- 16px)*/
 }
+
+/* Main div starts h ere */
+
 .main_div{
     height: 100vh;
     width: 100vw;
-    background-color: #f6f6f6;
+    background-color: #1A374D;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-/*1rem = 10px*/
+
+/* Music Container Starts Here  */
 .music_container {
     width: 35rem;
     height: 55rem;
-    background-color: #ffff;
+    background-color: #6998AB;
     border-radius: 2rem;
-    box-shadow: 1px 1px 30px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 30px 5px rgba(0, 0, 0, 0.5);
     padding: 3rem;
     text-align: center;
 }
@@ -31,7 +39,7 @@ html{
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     word-spacing: 0.5rem;
-    color: #171717;
+    color: black;
     margin: 2rem 0 0.5rem 0;
     font-size: 2.5rem;
     font-weight: 500;
@@ -39,13 +47,16 @@ html{
 }
 
 .music_container #artist {
-    color: #cccaca;
+    color: rgba(255, 255, 255, 0.8);
     text-transform: capitalize;
     letter-spacing: 0.1rem;
     font-size: 2rem;
     margin-bottom: 4rem ;
     font-weight: 300;
 }
+
+/* Image of Music Starts Here  */
+
 .img_container {
     width: 25rem;
     height: 25rem;
@@ -58,44 +69,45 @@ img {
     border-radius: 50%;
     box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.3);
 }
+
+/* Music Controls Starts Here  */
+
 .music_controls{
-    /* width: 20rem; */
-    margin-top: 5rem;
-    /* border: 2px solid red; */
+    margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 .music_controls .icons {
-    color: #111111;
+    color: whitesmoke;
     font-size: 2rem;
     cursor: pointer;
     filter: drop-shadow(1px 1px 10px 2px rgba(0, 0, 0, 0.5));
 }
 .music_controls .icons:hover {
-   color: grey;
+   color: #1A374D;
 }
 
 .music_controls .main-button {
-    /* border: 2px solid red; */
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
     font-size: 1.4rem;
-    color: #f6f6f6;
-    background-color: #111;
+    color: white;
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all .1s ease;
 }
 .music_controls .main-button:hover {
-    background-color: #f6f6f6;
-    color: #111;
-    box-shadow: 0 1rem 2rem 0.2rem rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 5px 2px  rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke;
 }
+
+
 /* adding anime class to animate*/
-.anime {
+/* .anime {
     animation: rotatePlayer 3s linear infinite ;
 }
 
@@ -106,4 +118,42 @@ img {
     to {
         transform: rotate(360deg);
     }
+} */
+
+/* Progress Bar Designing */
+
+.progressbar_container {
+    height: auto;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+.progress_div {
+    /* -- */
+    width: 100%;
+    height: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.07), 0 8px 16px rgba(0, 0, 0, 0.07), 0 16px 32px rgba(0, 0, 0, 0.07), 0 32px 64px rgba(0, 0, 0, 0.07);
+    border-radius: 4rem;
+    position: relative;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #B1D0E0;
+    border-radius: 4rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.progress_duration_meter {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    color: whitesmoke;
 }
